@@ -10,7 +10,7 @@ public class DescriptionTest {
 
     @Test(expected = DomainConstraintViolationException.class)
     public void description_over_5000_should_be_rejected() {
-        var over5000 = RandomString.make(5001);
+        String over5000 = RandomString.make(5001);
         assertThat(over5000.length()).isGreaterThan(5000);
         new Description(over5000);
     }
