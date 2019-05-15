@@ -4,18 +4,17 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.cristi.web.incognito</groupId>
-    <artifactId>incognito-parent</artifactId>
+    <groupId>com.cristi.web.jobgram</groupId>
+    <artifactId>jobgram-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Incognito Parent</name>
+    <name>Jobgram Parent</name>
 
     <modules>
-        <module>incognito-domain</module>
-        <module>incognito-application</module>
-        <module>incognito-infra</module>
-        <module>incognito-ui</module>
-        <module>incognito-exposition</module>
+        <module>jobgram-domain</module>
+        <module>jobgram-application</module>
+        <module>jobgram-infra</module>
+        <module>jobgram-exposition</module>
     </modules>
 
     <parent>
@@ -26,11 +25,11 @@
     </parent>
 
     <properties>
-        <project.version>${version}</project.version>
-        <project.group>com.cristi.web.incognito</project.group>
+        <project.version>${project.version}</project.version>
+        <project.group>com.cristi.web.jobgram</project.group>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.10</java.version>
+        <java.version>1.8</java.version>
         <swagger.version>2.9.2</swagger.version>
         <flyway.version>5.0.7</flyway.version>
         <jaxb.version>2.2.3</jaxb.version>
@@ -40,6 +39,7 @@
         <maven.war.plugin.version>3.0.0</maven.war.plugin.version>
         <cucumber.version>2.0.0</cucumber.version>
         <mongobee.version>0.14-SNAPSHOT</mongobee.version>
+        <spring.framework.version>5.0.4.RELEASE</spring.framework.version>
     </properties>
 
     <build>
@@ -147,45 +147,45 @@
 
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-domain</artifactId>
+                <artifactId>jobgram-domain</artifactId>
                 <version>${project.version}</version>
                 <classifier>tests</classifier>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-application</artifactId>
+                <artifactId>jobgram-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-application</artifactId>
+                <artifactId>jobgram-application</artifactId>
                 <version>${project.version}</version>
                 <classifier>tests</classifier>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-infra</artifactId>
+                <artifactId>jobgram-infra</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-infra</artifactId>
+                <artifactId>jobgram-infra</artifactId>
                 <version>${project.version}</version>
                 <classifier>tests</classifier>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-exposition</artifactId>
+                <artifactId>jobgram-exposition</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-exposition</artifactId>
+                <artifactId>jobgram-exposition</artifactId>
                 <version>${project.version}</version>
                 <classifier>tests</classifier>
                 <scope>test</scope>
@@ -211,7 +211,7 @@
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
             </dependency>
 
             <dependency>
@@ -224,6 +224,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.framework.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
             </dependency>
@@ -232,12 +238,6 @@
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
                 <version>${cucumber.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.github.mongobee</groupId>
-                <artifactId>mongobee</artifactId>
-                <version>${mongobee.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
