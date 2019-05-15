@@ -37,9 +37,12 @@
         <jaxb.impl.version>2.2.3</jaxb.impl.version>
         <spring.boot.version>2.0.2.RELEASE</spring.boot.version>
         <maven.war.plugin.version>3.0.0</maven.war.plugin.version>
-        <cucumber.version>2.0.0</cucumber.version>
+        <cucumber.version>1.2.5</cucumber.version>
         <mongobee.version>0.14-SNAPSHOT</mongobee.version>
         <spring.framework.version>5.0.4.RELEASE</spring.framework.version>
+        <jsr250.version>1.0</jsr250.version>
+        <jsonpath.version>2.4.0</jsonpath.version>
+        <jackson-datatype-jsr310.version>2.9.8</jackson-datatype-jsr310.version>
     </properties>
 
     <build>
@@ -77,7 +80,7 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <configuration>
-                        <excludes>incognito-parent</excludes>
+                        <excludes>jobgram-parent</excludes>
                     </configuration>
                     <executions>
                         <execution>
@@ -191,6 +194,14 @@
                 <scope>test</scope>
             </dependency>
 
+
+            <!--Public dependencies-->
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>jsr250-api</artifactId>
+                <version>${jsr250.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -234,10 +245,31 @@
                 <artifactId>hibernate-validator</artifactId>
             </dependency>
 
+            <!--Test frameworks-->
             <dependency>
-                <groupId>io.cucumber</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-java</artifactId>
                 <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-spring</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+                <version>${jsonpath.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson-datatype-jsr310.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

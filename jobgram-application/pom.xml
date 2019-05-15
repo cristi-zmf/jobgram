@@ -12,7 +12,7 @@
 	<packaging>jar</packaging>
 
 	<name>Jobgram Application</name>
-	<description>Infrastructure module of Jobgram app</description>
+	<description>Application module of Jobgram app</description>
 
 
 	<dependencies>
@@ -29,15 +29,28 @@
 			<classifier>tests</classifier>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.framework.version}</version>
+		</dependency>
+
+		<!--Test frameworks-->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
