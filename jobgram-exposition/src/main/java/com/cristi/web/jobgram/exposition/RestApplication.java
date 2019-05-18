@@ -7,7 +7,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Import;
 
-//@IncognitoMapping
 @SpringBootApplication
 @Import(ApplicationConfig.class)
 public class RestApplication extends SpringBootServletInitializer {

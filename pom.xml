@@ -147,7 +147,7 @@
             <!--project dependecies-->
             <dependency>
                 <groupId>${project.group}</groupId>
-                <artifactId>incognito-domain</artifactId>
+                <artifactId>jobgram-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

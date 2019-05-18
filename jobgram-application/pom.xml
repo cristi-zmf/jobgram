@@ -26,6 +26,7 @@
 		<dependency>
 			<groupId>${project.group}</groupId>
 			<artifactId>jobgram-domain</artifactId>
+			<version>${project.version}</version>
 			<classifier>tests</classifier>
 			<scope>test</scope>
 		</dependency>

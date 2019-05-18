@@ -7,4 +7,51 @@
         version="2.1"
 >
     <access>FIELD</access>
+    <mapped-superclass class="com.cristi.web.jobgram.domain.ddd.BaseEntity">
+        <attributes>
+            <embedded-id name="id"/>
+            <transient name="type"/>
+        </attributes>
+    </mapped-superclass>
+
+    <mapped-superclass class="com.cristi.web.jobgram.domain.ddd.BaseAggregateRoot">
+        <attributes>
+            <version name="version"/>
+        </attributes>
+    </mapped-superclass>
+
+    <entity class="com.cristi.web.jobgram.domain.jobdescription.JobDescription">
+        <attributes>
+            <embedded name="description"/>
+            <embedded name="title">
+                <attribute-override name="value">
+                    <column name="TITLE"/>
+                </attribute-override>
+            </embedded>
+        </attributes>
+    </entity>
+
+    <embeddable class="com.cristi.web.jobgram.domain.UniqueId">
+        <attributes>
+            <basic name="value">
+                <column name="ID"/>
+            </basic>
+        </attributes>
+    </embeddable>
+
+    <embeddable class="com.cristi.web.jobgram.domain.Description">
+        <attributes>
+            <basic name="value">
+                <column name="DESCRIPTION"/>
+            </basic>
+        </attributes>
+    </embeddable>
+
+<!--    <embeddable class="com.cristi.web.jobgram.domain.ShortLabel">-->
+<!--        <attributes>-->
+<!--            <basic name="value">-->
+<!--                <column name="SHORT LABEL"/>-->
+<!--            </basic>-->
+<!--        </attributes>-->
+<!--    </embeddable>-->
 </entity-mappings>
