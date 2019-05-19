@@ -21,5 +21,16 @@ public class JobDescription extends BaseAggregateRoot<JobDescription, UniqueId> 
         validate(this);
     }
 
+    public Description getDescription() {
+        return description;
+    }
 
+    public ShortLabel getTitle() {
+        return title;
+    }
+
+    private JobDescription() {
+        /*USED BY JPA, DONT USE IN PRODUCTION CODE*/
+        super(JobDescription.class);
+    }
 }

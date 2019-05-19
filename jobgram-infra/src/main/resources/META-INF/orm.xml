@@ -21,6 +21,7 @@
     </mapped-superclass>
 
     <entity class="com.cristi.web.jobgram.domain.jobdescription.JobDescription">
+        <table name="JOB_DESCRIPTION"/>
         <attributes>
             <embedded name="description"/>
             <embedded name="title">
@@ -47,11 +48,11 @@
         </attributes>
     </embeddable>
 
-<!--    <embeddable class="com.cristi.web.jobgram.domain.ShortLabel">-->
-<!--        <attributes>-->
-<!--            <basic name="value">-->
-<!--                <column name="SHORT LABEL"/>-->
-<!--            </basic>-->
-<!--        </attributes>-->
-<!--    </embeddable>-->
+    <embeddable class="com.cristi.web.jobgram.domain.ShortLabel">
+        <attributes>
+            <basic name="value">
+                <column name="SHORT LABEL"/>
+            </basic>
+        </attributes>
+    </embeddable>
 </entity-mappings>

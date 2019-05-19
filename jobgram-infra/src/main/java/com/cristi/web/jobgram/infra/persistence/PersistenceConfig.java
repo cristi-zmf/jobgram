@@ -1,5 +1,6 @@
 package com.cristi.web.jobgram.infra.persistence;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration;
@@ -19,11 +20,6 @@ import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 @ComponentScan(
         basePackages = {"com.cristi.web.jobgram"}
 )
+@EnableAutoConfiguration
 public class PersistenceConfig {
-//    @Bean
-//    public LocalEntityManagerFactoryBean  entityManagerFactory() {
-//        LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
-//        factoryBean.setPersistenceUnitName("jpa");
-//        return factoryBean;
-//    }
 }

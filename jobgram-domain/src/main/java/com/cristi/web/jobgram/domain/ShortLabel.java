@@ -1,7 +1,6 @@
 package com.cristi.web.jobgram.domain;
 
 import com.cristi.web.jobgram.domain.ddd.BaseValueObject;
-import org.springframework.stereotype.Service;
 
 import javax.validation.Payload;
 import javax.validation.constraints.NotEmpty;
@@ -21,6 +20,11 @@ public class ShortLabel extends BaseValueObject<ShortLabel> {
         validate(this);
     }
 
+    private ShortLabel() {
+        /*USED BY JPA, DONT USE IN PRODUCTION CODE*/
+        super(ShortLabel.class);
+        value = null;
+    }
 
     @Override
     protected List<Object> attributesToIncludeInEqualityCheck() {
