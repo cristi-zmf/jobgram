@@ -7,7 +7,6 @@ import com.cristi.web.jobgram.domain.jobdescription.JobDescriptions;
 import org.springframework.context.annotation.Lazy;
 
 @ApplicationService
-@Lazy
 public class AddJobDescription {
     private final JobDescriptions jobDescriptions;
 
