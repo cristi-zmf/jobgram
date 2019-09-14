@@ -4,12 +4,14 @@ import com.cristi.web.jobgram.domain.Description;
 import com.cristi.web.jobgram.domain.ShortLabel;
 import com.cristi.web.jobgram.domain.UniqueId;
 import com.cristi.web.jobgram.domain.ddd.BaseValueObject;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 import com.cristi.web.jobgram.domain.jobdescription.JobDescription;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
+@DDD.ApplicationCommand
 public class AddJobDescriptionCommand extends BaseValueObject<AddJobDescriptionCommand> {
     private final ShortLabel title;
     private final Description description;

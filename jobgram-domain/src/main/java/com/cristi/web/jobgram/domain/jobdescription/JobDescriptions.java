@@ -1,10 +1,11 @@
 package com.cristi.web.jobgram.domain.jobdescription;
 
 import com.cristi.web.jobgram.domain.UniqueId;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 
 import java.util.Set;
 
-/**DDD domain repository*/
+@DDD.DomainRepository
 public interface JobDescriptions {
     JobDescription get(UniqueId id);
     Set<JobDescription> findAll();

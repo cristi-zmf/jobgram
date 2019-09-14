@@ -2,11 +2,13 @@ package com.cristi.web.jobgram.application.jobdescription;
 
 import com.cristi.web.jobgram.application.ApplicationService;
 import com.cristi.web.jobgram.domain.UniqueId;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 import com.cristi.web.jobgram.domain.jobdescription.JobDescription;
 import com.cristi.web.jobgram.domain.jobdescription.JobDescriptions;
 import org.springframework.context.annotation.Lazy;
 
 @ApplicationService
+@DDD.ApplicationService
 public class AddJobDescription {
     private final JobDescriptions jobDescriptions;
 

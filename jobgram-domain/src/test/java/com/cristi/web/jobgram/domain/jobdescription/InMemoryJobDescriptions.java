@@ -1,6 +1,7 @@
 package com.cristi.web.jobgram.domain.jobdescription;
 
 import com.cristi.web.jobgram.domain.UniqueId;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
@@ -8,6 +9,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 @Repository
+@DDD.DomainRepositoryImpl
 public class InMemoryJobDescriptions implements JobDescriptions{
     private final Set<JobDescription> db = new HashSet<>();
 

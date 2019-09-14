@@ -1,6 +1,7 @@
 package com.cristi.web.jobgram.infra.persistence.jobdescription;
 
 import com.cristi.web.jobgram.domain.UniqueId;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 import com.cristi.web.jobgram.domain.jobdescription.JobDescription;
 import com.cristi.web.jobgram.domain.jobdescription.JobDescriptions;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 ///DDD repository impl
 @Repository
+@DDD.DomainRepositoryImpl
 public class SdjJobDescriptions implements JobDescriptions {
 
     private final JobDescriptionsSdj sdj;

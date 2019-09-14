@@ -1,12 +1,14 @@
 package com.cristi.web.jobgram.domain;
 
 import com.cristi.web.jobgram.domain.ddd.BaseValueObject;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 
 import javax.validation.constraints.Size;
 import java.util.List;
 
 import static java.util.Collections.singletonList;
 
+@DDD.ValueObject
 public class Description extends BaseValueObject<Description> {
     @Size(max = 5000)
     private String value;

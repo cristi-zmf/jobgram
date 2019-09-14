@@ -1,6 +1,7 @@
 package com.cristi.web.jobgram.domain;
 
 import com.cristi.web.jobgram.domain.ddd.BaseValueObject;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 
 import javax.validation.Payload;
 import javax.validation.constraints.NotEmpty;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 import static java.util.Arrays.asList;
 
+@DDD.ValueObjectId
 public class UniqueId extends BaseValueObject<UniqueId> implements Serializable {
     @Constraint
     private final String value;

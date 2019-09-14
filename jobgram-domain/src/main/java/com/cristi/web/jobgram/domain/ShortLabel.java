@@ -1,6 +1,7 @@
 package com.cristi.web.jobgram.domain;
 
 import com.cristi.web.jobgram.domain.ddd.BaseValueObject;
+import com.cristi.web.jobgram.domain.ddd.DDD;
 
 import javax.validation.Payload;
 import javax.validation.constraints.NotEmpty;
@@ -10,6 +11,7 @@ import java.util.List;
 
 import static java.util.Collections.singletonList;
 
+@DDD.ValueObject
 public class ShortLabel extends BaseValueObject<ShortLabel> {
     @Constraint
     private final String value;
