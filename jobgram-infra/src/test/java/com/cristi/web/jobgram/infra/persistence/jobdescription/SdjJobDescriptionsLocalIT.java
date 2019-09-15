@@ -25,7 +25,7 @@ public class SdjJobDescriptionsLocalIT extends InfraLocalIT {
     public void setUp() {
         sdj.deleteAll();
         aJobDescription = new JobDescription(
-                new UniqueId(), new ShortLabel("Java developer"), new Description("Java developer for spring boot application"), 0L
+                new UniqueId(), new ShortLabel("Java developer"), new Description("Java developer for spring boot application"), qualifications, 0L
         );
     }
 

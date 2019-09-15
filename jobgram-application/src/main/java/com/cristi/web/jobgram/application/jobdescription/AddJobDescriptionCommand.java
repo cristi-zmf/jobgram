@@ -23,7 +23,7 @@ public class AddJobDescriptionCommand extends BaseValueObject<AddJobDescriptionC
     }
 
     public JobDescription buildNewJobDescription() {
-        return new JobDescription(new UniqueId(), title, description, 0L);
+        return new JobDescription(new UniqueId(), title, description, qualifications, 0L);
     }
 
     @Override

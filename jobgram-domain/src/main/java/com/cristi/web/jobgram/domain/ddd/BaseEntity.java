@@ -23,11 +23,19 @@ public abstract class BaseEntity<T extends BaseEntity<T, ID>, ID extends BaseVal
 
     @Override
     public boolean equals(Object obj) {
+        if (type == null) {
+            return false;
+        }
         if (!type.isInstance(obj)) {
             return false;
         }
         T other = type.cast(obj);
         return id.equals(other.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 
     @Override
